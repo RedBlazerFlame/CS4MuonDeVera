@@ -1,7 +1,5 @@
 package q1ex3;
 
-import java.text.MessageFormat;
-
 /**
  *
  * @author Hans Gabriel D. De Vera
@@ -48,7 +46,7 @@ public class Q1Ex3 {
         // Change Name, Perform, and Change the Favorite Song
         amatsuki.setName("Mafumafu"); // Amatsuki is actually Mafumafu in disguise! :O
         amatsuki.performForAudience(12);
-        amatsuki.changeFavSong(atorakutoRaito);
+        amatsuki.setFavoriteSong(atorakutoRaito);
         
         // After the events
         System.out.printf("amatsuki = %s\n", amatsuki.toString());

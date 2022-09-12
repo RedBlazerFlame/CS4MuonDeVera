@@ -14,19 +14,20 @@ public class Singer {
     private double earnings;
     private Song favoriteSong;
     private double earningsPerPerson;
-    private boolean logActions;
+    private boolean logActionFlag;
     
     // Constructors
-    public Singer(String a_name, int a_performances, double a_earnings, Song a_favoriteSong, double a_earningsPerPerson, boolean a_logActions) {
+    public Singer(String a_name, int a_performances, double a_earnings, Song a_favoriteSong, double a_earningsPerPerson, boolean a_logActionFlag) {
         name = a_name;
         noOfPerformances = a_performances;
         earnings = a_earnings;
         favoriteSong = a_favoriteSong;
         earningsPerPerson = a_earningsPerPerson;
-        logActions = a_logActions;
+        logActionFlag = a_logActionFlag;
     }
     
     // Getters and Setters
+    
     public String getName() {
         return name;
     }
@@ -41,6 +42,10 @@ public class Singer {
     
     public Song getFavoriteSong() {
         return favoriteSong;
+    }
+    
+    public boolean getLogActionFlag() {
+        return logActionFlag;
     }
     
     public void setName(String a_name) {
@@ -58,8 +63,8 @@ public class Singer {
         favoriteSong = a_song;
     }
     
-    public void shouldLogActions(boolean a_logActions) {
-        logActions = a_logActions;
+    public void setLogActionFlag(boolean a_logActionFlag) {
+        logActionFlag = a_logActionFlag;
     }
     
     /// No setter for earnings, since the only way the singer should be able to get money
@@ -102,7 +107,7 @@ public class Singer {
     }
     
     public void logAction(String log) {
-        if(logActions) {
+        if(logActionFlag) {
             System.out.printf("Singer Log (%s): %s", name, log);
         }
     }

@@ -25,6 +25,14 @@ public class Singer {
     }
     
     // Getters and Setters
+    
+//    private String name;
+//    private int noOfPerformances;
+//    private double earnings;
+//    private Song favoriteSong;
+//    private double earningsPerPerson;
+//    private boolean logActions;
+    
     public String getName() {
         return name;
     }
@@ -37,8 +45,12 @@ public class Singer {
         return earnings;
     }
     
-    public Song getFavSong() {
+    public Song getFavoriteSong() {
         return favoriteSong;
+    }
+    
+    public double getEarningsPerPerson() {
+        return earningsPerPerson;
     }
     
     public void setName(String a_name) {
@@ -51,7 +63,7 @@ public class Singer {
         earningsPerPerson = a_earningsPerPerson;
     }
     
-    public void changeFavSong(Song a_song) {
+    public void setFavoriteSong(Song a_song) {
         logAction(String.format("favorite song changed to %s\n", a_song.getName()));
         favoriteSong = a_song;
     }

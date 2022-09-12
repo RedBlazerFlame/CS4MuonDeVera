@@ -46,6 +46,7 @@ public class Song {
         trackLengthSeconds = minutes * 60 + seconds;
     }
     
+    // Methods
     public String toString() {
         return String.format("Song {\n\tname: %s\n\tcomposer: %s\n\ttrackLength: %02d:%02d\n}", name, composer, trackLengthSeconds / 60, trackLengthSeconds % 60);
     }
